@@ -6,11 +6,6 @@ FileValidation = (event) => {
     console.log(image.src);
     document.getElementById("demoi").src = image.src;
 }
-$(function () {
-    $('#output').on('click', function () {
-        $('#file').click();
-    });
-});
 
 function visib() {
     document.getElementById('vi').style.cssText = 'display:none;';
