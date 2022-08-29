@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+
+<body>
+    <div id="vi">
+        <section class="test-form">
+
+            <div class="container">
+                <div class="maindiv">
+                    <div class="inner-main-div">
+                        <div class="edit-btn">
+                            <a href=""><button class="b_edit">Edit</button></a>
+                        </div>
+                        <div class="done-btn">
+                            <button type="button" onclick="visib(); toggleFormElements(true);" id="save_btn"
+                                class="btn btn-default b_done">Done</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="formdiv">
+                    <form action="">
+                        <div class="profile-pic">
+                            <img alt="User Pic" src="https://d30y9cdsu7xlg0.cloudfront.net/png/138926-200.png"
+                                id="output" height="200">
+                            <input id="file" class="hidden" type="file" onchange="FileValidation(event)" required>
+                        </div>
+
+                    </form>
+                    <div class="formheading">
+                        <b><input type="text" id="hname" name="hname" class="hname" value="Bhavin Bhagat"></b>
+                    </div>
+                    <form action="" class="form-box d-flex ">
+                        <fieldset class="mainfieldset w50">
+                            <div class="form-title">
+                                <h3>Business Intrests</h3>
+                            </div>
+                            <div class="field">
+                                <label for="">ACTIVITIES</label>
+                                <input type="checkbox" id="act1" class="cbox" name="act1" value="Buy">
+                                <label for="act1" class="check-lab"> Buy</label>
+                                <input type="checkbox" id="act2" class="cbox" name="act2" value="Invest">
+                                <label for="act2" class="check-lab"> Invest</label>
+                                <input type="checkbox" id="act3" class="cbox" name="act3" value="Partner">
+                                <label for="act3" class="check-lab"> Partner</label>
+                                <input type="checkbox" id="act4" class="cbox" name="act4" value="Lease">
+                                <label for="act4" class="check-lab"> Lease</label>
+                                <input type="checkbox" id="act5" class="cbox" name="act5" value="Franchise">
+                                <label for="act5" class="check-lab"> Franchise</label>
+                            </div>
+                            <div class="field">
+                                <label for="ind">Industries:</label>
+                                <select name="ind" id="ind">
+                                    <option value="Hotel & Restaurant" class="indopt">Hotel & Restaurant</option>
+                                    <option value="IT Secto" class="indopt">IT Sector</option>
+                                    <option value="Telecom" class="indopt">Telecom</option>
+                                    <option value="Finance" class="indopt">Finance</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="city">Location:</label>
+                                <input type="checkbox" id="act0" class="lbox" name="act0" value="Chennai">
+                                <label for="act0" class="check-lab"> Chennai</label>
+                                <input type="checkbox" id="act6" class="lbox" name="act6" value="Delhi">
+                                <label for="act6" class="check-lab"> Delhi</label>
+                                <input type="checkbox" id="act7" class="lbox" name="act7" value="Kolkata">
+                                <label for="act7" class="check-lab"> Kolkata</label>
+                                <input type="checkbox" id="act8" class="lbox" name="act8" value="Mumbai">
+                                <label for="act8" class="check-lab"> Mumbai</label>
+                                <input type="checkbox" id="act9" class="lbox" name="act9" value="Indor">
+                                <label for="act9" class="check-lab"> Indor</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="mainfieldset w50">
+                            <div class="form-title">
+                                <h3>Personal</h3>
+                            </div>
+                            <div class="field">
+                                <label for="phone">Mobile:</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 12345 67890"
+                                    pattern="[+][0-9]{3}-[0-9]{5}-[0-9]{5}" maxlength="13" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="zip">Zip code:</label>
+                                <input id="zip" name="zip" type="text" inputmode="numeric" placeholder="362 001"
+                                    pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$" maxlength="6" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="mainfieldset w50">
+                            <div class="form-title">
+                                <h3>Finalcial</h3>
+                            </div>
+                            <div class="field">
+                                <label for="fund">FUNDING SOURCE:</label>
+                                <input type="radio" id="Own" name="radio1" value="Own" class="rans">
+                                <label for="Own" class="check-lab">Own</label>
+                                <input type="radio" id="Familyfriends" name="radio1" value="Family & friends"
+                                    class="rans">
+                                <label for="Familyfriends" class="check-lab"> Family & friends</label>
+                                <input type="radio" id="BankLoan" name="radio1" value="Bank Loan" class="rans">
+                                <label for="BankLoan" class="check-lab">Bank Loan</label>
+                                <input type="radio" id="Externalinvestors" name="radio1" value="External investors"
+                                    class="rans">
+                                <label for="Externalinvestors" class="check-lab">External investors</label>
+                            </div>
+                            <div class="field">
+                                <label for="budget">BUDGET:</label>
+                                <input type="text" id="budget" name="budget" placeholder="1 crore to 2 crores">
+
+                            </div>
+                        </fieldset>
+                        <fieldset class="mainfieldset w50">
+                            <div class="form-title">
+                                <h3>Professional</h3>
+                            </div>
+                            <div class="field">
+                                <label for="cname">COMAPANY NAME:</label>
+                                <input type="text" id="cname" name="cname" placeholder="ACME India Private Limited">
+
+                            </div>
+                            <div class="field">
+                                <label for="skills">SKILLS:</label>
+                                <input type="checkbox" id="act10" class="sbox" name="act10" value="Marketing">
+                                <label for="act10" class="check-lab"> Marketing</label>
+                                <input type="checkbox" id="act11" class="sbox" name="act11" value="Electronics">
+                                <label for="act11" class="check-lab"> Electronics</label>
+                                <input type="checkbox" id="act12" class="sbox" name="act12" value="Culinary">
+                                <label for="act12" class="check-lab"> Culinary</label>
+                                <input type="checkbox" id="act13" class="sbox" name="act13" value="Designing">
+                                <label for="act13" class="check-lab"> Designing</label>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                </div>
+            </div>
+
+    </div>
+    </section>
+    </div>
+
+
+    <div id="vi_update">
+        <section class="test-form">
+
+            <div class="container">
+                <div class="maindiv">
+                    <div class="inner-main-div">
+                        <div class="edit-btn">
+                            <button type="button" onclick="visiedit(); toggleFormElements(false);" id="save_btn"
+                                class="btn btn-default b_edit2">Edit</button>
+                        </div>
+                        <div class="done-btn">
+                            <button class="b_done2">Done</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="formdiv">
+                    <form action="">
+                        <div class="profile-pic">
+                            <img alt="User Pic" src="https://d30y9cdsu7xlg0.cloudfront.net/png/138926-200.png"
+                                id="demoi" height="200">
+                            <input id="file" class="hidden" type="file" onchange="FileValidation(event)" required>
+                        </div>
+
+                    </form>
+                    <div class="formheading">
+                        <span id="phname" class="hname"></span>
+                    </div>
+                    <form action="" class="form-box d-flex ">
+                        <fieldset class="mainfieldset w50">
+                            <div class="form-title">
+                                <h3>Business Intrests</h3>
+                            </div>
+                            <div class="field">
+                                <label for="">ACTIVITIES</label>
+                                <span id="pcbox"></span>
+                            </div>
+                            <div class="field">
+                                <label for="ind">Industries:</label>
+                                <span id="pind"></span>
+                            </div>
+
+                            <div class="field">
+                                <label for="city">Location:</label>
+                                <span id="plbox"></span>
+                            </div>
+                        </fieldset>
+                        <fieldset class="mainfieldset w50">
+                            <div class="form-title">
+                                <h3>Personal</h3>
+                            </div>
+                            <div class="field">
+                                <label for="phone">Mobile:</label>
+                                <span id="pphone"></span>
+                            </div>
+
+                            <div class="field">
+                                <label for="zip">Zip code:</label>
+                                <span id="pzip"></span>
+                            </div>
+                        </fieldset>
+                        <fieldset class="mainfieldset w50">
+                            <div class="form-title">
+                                <h3>Finalcial</h3>
+                            </div>
+                            <div class="field">
+                                <label for="fund">FUNDING SOURCE:</label>
+                                <span id="prans"></span>
+                            </div>
+                            <div class="field">
+                                <label for="budget">BUDGET:</label>
+                                <span id="pbudget"></span>
+                            </div>
+                        </fieldset>
+                        <fieldset class="mainfieldset w50">
+                            <div class="form-title">
+                                <h3>Professional</h3>
+                            </div>
+                            <div class="field">
+                                <label for="cname">COMAPANY NAME:</label>
+                                <span id="pcname"></span>
+                            </div>
+                            <div class="field">
+                                <label for="skills">SKILLS:</label>
+                                <span id="psbox"></span>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                </div>
+            </div>
+
+    </div>
+    </section>
+    </div>
+
+
+</body>
+
+</html>
